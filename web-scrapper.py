@@ -15,12 +15,14 @@ repositories = soup.find_all('span', {'class': 'repo'})
 # open csv file and write header
 file = open('github_users.csv', 'w', newline='', encoding='utf-8')
 writer = csv.writer(file)
-writer.writerow(['profile_image','repositories'])
+writer.writerow([github_user])
 
 # print scraped image url and pinned repositories
 print(profile_image)
+writer.writerow([profile_image])
 for repo in repositories:
     print(repo.text)
+    writer.writerow([repo.text])
 
 # close csv file
 file.close()
