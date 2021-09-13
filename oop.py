@@ -1,7 +1,23 @@
-class Customer:
+class User:
+    def log(self):
+        print(self)
+
+class Teacher(User):
+    def log(self):
+        print("I'm a teacher")
+
+class Customer(User):
     def __init__(self, name, membership):
         self.name = name
         self.membership = membership
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        self._name = name
 
     def update_membership(self, new_membership):
         print("Calculating cost of new membership")
@@ -23,6 +39,10 @@ class Customer:
             return True
         return False
 
+    __hash__ = None
+
+    __repr__ = __str__
+
 customers = [Customer("Caleb", "Gold"), Customer("Brad", "Bronze"), Customer("Caleb", "Gold")]
 
 print(customers[1])
@@ -35,3 +55,11 @@ Customer.print_all_customers(customers)
 
 print(customers[0] == customers[2])
 print(id(customers[0]), id(customers[2]))
+
+customers[0].log()
+
+users = [Customer("Caleb", "Gold"), Customer("Brad", "Bronze"), Customer("Caleb", "Gold"), Teacher()]
+
+
+for user in users:
+    user.log()
