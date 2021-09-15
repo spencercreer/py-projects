@@ -1,3 +1,11 @@
+"""
+Four Pillars of Object-Oriented Programming
+1) Abstraction
+2) Inheritance
+3) Encapsulation
+4) Polymorphism
+"""
+
 class User:
     def log(self):
         print(self)
