@@ -33,10 +33,10 @@ SERVER = 'smtp.gmail.com'
 PORT = 587
 FROM = 'spencercreer@gmail.com'
 TO = 'spencercreer@gmail.com'
-PASS = '955503Sc!'
+PASS = '*****!'
 
 msg = MIMEMultipart()
-msg['Subject'] = 'Top News Stories HN [Automated Email]'+' '+str(now.day)+'-'+str(now.year)
+msg['Subject'] = 'Top News Stories HN [Automated Email]'+' '+str(now.month)+'-'+str(now.day)+'-'+str(now.year)
 msg['From'] = FROM
 msg['To'] = TO
 msg.attach(MIMEText(content,'html'))
