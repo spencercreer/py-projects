@@ -31,9 +31,10 @@ print('Composing Email...')
 
 SERVER = 'smtp.gmail.com'
 PORT = 587
-FROM = 'spencercreer@gmail.com'
-TO = 'spencercreer@gmail.com'
-PASS = '*****!'
+#Replace with correct credentials
+FROM = '****'
+TO = '****'
+PASS = '****'
 
 msg = MIMEMultipart()
 msg['Subject'] = 'Top News Stories HN [Automated Email]'+' '+str(now.month)+'-'+str(now.day)+'-'+str(now.year)
