@@ -6,6 +6,9 @@ Test cases for a binary search problem
 ## Future Value
 An investment future value calculator with graphic window
 
+## K-means
+A k++ kmeans algorithm
+
 ## News Email
 An automatic email generator that sends the Hacker News headlines
 
